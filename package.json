@@ -1,18 +1,30 @@
 {
   "name": "react-utls",
-  "version": "0.9.0-beta",
+  "version": "0.9.1-beta",
   "description": "Useful and well typed utility components and hooks for React and React Native applications",
-  "main": "/dist/cjs/index.js",
-  "module": "/dist/esm/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "react-native",
+    "utility",
+    "utils",
+    "helpers",
+    "pattern-matching",
+    "hooks"
   ],
   "scripts": {
     "build": "rm -rf /dist && prettier --write ./src && npm run build:esm && npm run build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
-    "test": "jest --watch",
-    "prepack": "npm run build"
+    "test:watch": "jest --watch",
+    "test:run": "jest",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run test:run && npm run typecheck && prettier ./src && npm run build"
   },
   "peerDependencies": {
     "react": "^18.0.28"
