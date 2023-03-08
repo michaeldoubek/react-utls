@@ -1,6 +1,6 @@
 {
   "name": "react-utls",
-  "version": "0.9.1-beta",
+  "version": "0.9.2-beta",
   "description": "Useful and well typed utility components and hooks for React and React Native applications",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
