@@ -1,3 +1,4 @@
+export {default as Match} from './Match';
 export * from './Match';
 export {default as Show} from './Show';
 export {default as State} from './State';
